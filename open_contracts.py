@@ -94,5 +94,7 @@ for group_name in list(dt_summary_group.groups):
 # In[456]:
 
 
-print (option_summary.sort_values(['Contract Month'], ascending=True))
+#print (option_summary.sort_values(['Contract Month','Underlying'], ascending=True))
+
+print ((option_summary.sort_values(['Contract Month','Underlying'], ascending=True)).to_string(index=False))
 

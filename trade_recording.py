@@ -7,9 +7,8 @@
 import datetime, sys
 import pandas as pd
 todays_date = datetime.datetime.now().date()
+today_month = datetime.datetime.now().month
 
-
-# In[59]:
 
 
 def input_data():
@@ -42,7 +41,11 @@ def input_data():
 
     underlying = input('Underlying ?\n')
 
-    contract_month = input('Contract Month (mm) ?\n')
+    contract_month = input('Contract Month ? This month is %s. Press enter for %s\n'%(str(today_month),str(today_month)))
+    
+    if contract_month == '':
+        contract_month = str(today_month)
+
 
     strike_price = input('Strike Price ?\n')
 
